@@ -9,6 +9,16 @@ let itemList = [{
 {
     itemName: "Paratha",
     uniqueNo: 3,
+},
+{
+    itemName : "kuchv",
+  //  uniqueNo : 4
+},
+{
+    itemName : "kuchggg",
+},
+{
+    itemName : "kuchcc",
 }
 ];
 
@@ -22,7 +32,7 @@ function onDeleteItems(itemId){
 
 function createAndAppend(item) {
     let itemId = "item" + item.uniqueNo;
-    let buttonId = "button" + item.uniqueNo;
+   // let buttonId = "button" + item.uniqueNo;
 
     let itemEl = document.createElement("li");
     itemEl.id = itemId;
@@ -33,7 +43,7 @@ function createAndAppend(item) {
     let buttonEl = document.createElement("button");
     buttonEl.classList.add("btn", "btn-danger", "ml-3");
     buttonEl.textContent = "Cancel";
-    buttonEl.id = buttonId;
+    //buttonEl.id = buttonId;
 
 
     buttonEl.onclick = function(){
@@ -43,6 +53,14 @@ function createAndAppend(item) {
     itemEl.appendChild(buttonEl);
 }
 
+let a = 0;
+
+
+
 for(let item of itemList){
-    createAndAppend(item);
-}
+        createAndAppend(item);
+        a+=1;
+        if (a===2){
+            break;
+        }
+    }
